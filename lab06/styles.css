@@ -1,0 +1,10 @@
+
+/* grouped selector, will style all h1's and p's */
+body {font-family: 'Times New Roman', Times, serif}
+h1, h2 {color:purple}
+
+p, ul, td, th {color:purple;
+    font-size 100%;
+    font-family: 'Times New Roman', Times, serif;}
+
+.evenrow {background-color:red} 
