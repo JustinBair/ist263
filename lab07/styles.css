@@ -1,0 +1,19 @@
+body {background-color: #EEE2DE}
+        a {color: #f4bf96}
+        a:visited {background-color: #CE5A67}
+        a:hover {background-color: #1f1717}
+        body {font-family: 'Times New Roman', Times, serif;}
+        h1, h2 {color: #2B2A4C;}
+        p, ul, td, th {color: #B31312;}
+
+
+nav {background-color: #2B2A4C; 
+    padding: 10px;
+    margin-bottom: 30px;
+    }
+    nav a{color: #B31312}
+    nav a:hover {background-color: #1f1717;}
+
+
+
+.evenrow {background-color: #f4bf96;} 
