@@ -1,0 +1,103 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <script src="https://kit.fontawesome.com/20fa1ce782.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="Stylesheet" href="styles.css">
+        <style> table, th, td {border: 1px solid black;}
+        
+        .flexbox {
+    display: flex;
+    height: 100vh; /* Ensure the container takes up full viewport height */
+}
+
+.icons-container {
+    flex: 1; /* Takes up 50% of available space */
+    background-color: lightblue; /* Just for visualization */
+}
+
+.skills-container {
+    flex: 1; /* Takes up 50% of available space */
+    display: flex;
+    flex-direction: split; /* Stack items vertically */
+}
+
+.other-skills {
+    flex-grow: 1; /* Take up remaining space */
+    background-color: lightgreen; /* Just for visualization */
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px; /* Add margin between columns */
+}
+
+.icons-skills {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 20px;
+}
+
+.skills-container h2 {
+    color: #333;
+}
+
+.skills-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-container li {
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0; /* Remove default body margin */
+}
+        
+.combined {display: flex 1}
+.flexbox, .skills-container {display: flex}
+.split {justify-content: space-between;}
+        </style>
+
+    </head>
+    <body>
+        <div class="combined"></div>
+        <div class="flexbox">
+            <div class="icons-container">
+                <p>My career is just starting as a lieutenant within the Army National Guard hoping to make a positive impact no matter where I am at. Below are my core skills I am planning on utilizing to make that goal happen.</p>
+                <div class="skills"> 
+                    <div class="icon">
+                        <i class="fas fa-calendar"></i>
+                        <p>Project Management</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                        <p>Time Management</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-medal"></i>
+                        <p>Motivated</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-fingerprint"></i>
+                        <p>Trusted</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <p>Critical Thinker</p>
+            </div>
+            <div class="flexbox">
+                <div class="other-skills">
+                    <h2>Other Skills</h2>
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Communication</li>
+                        <li>Problem-solving</li>
+                        <li>Teamwork</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+
+    </body>
+    </html>
