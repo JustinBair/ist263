@@ -5,251 +5,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&D Character Attributes</title>
     <style>
-table, th, td {border: 1px solid #000000;} 
-        .container {
+        table, th, td {
+            border: 1px solid #000000;
+        }
 
+        .container {
             display: flex;
+            flex-direction: row;
+            justify-content: space-between; /* Distribute space between flex items */
+        }
+
+        .left-input-group {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .left-input-side {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .middle-input-group {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right-input-group {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             flex-direction: row;
         }
 
+        .skills {
+            display: flex;
+            align-items: left;
+        }
 
-.left-input-group {
-    flex: 1;
-    padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    flex-direction: column;
-}
-.left-input-side {
-    flex: 1;
-    padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    flex-direction: column   
-}
+        .modifier {
+            flex: 1;
+            padding: 20px;
+        }
 
-.middle-input-group {
-flex: 1; 
-padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-     
-}
+        .proficiencies {
+            flex: 2;
+            width: auto; /* Let the width adjust automatically */
+        }
 
-.right-input-group {
-flex: 1;
-padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    flex-direction: row; 
-}
+        .information {
+            flex: 3; /* Adjust the flex value to allocate more space */
+            padding: 20px;
+        }
 
-.skills {
-    display: flex;
-    align-items: center; 
-}
+        .information textarea {
+            flex: 1; /* Make the text area expand to fill available space */
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            resize: vertical;
+            margin-bottom: 10px; /* Add margin bottom for spacing */
+        }
 
-
-
-.modifier {
-    flex:1; 
-    padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    flex-direction: column;
-}
-
-
-.proficiencies {
-    flex:2;
-    display: flex;
-    align-content: left;
-}
-
+        textarea {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            resize: vertical; /* Allow vertical resizing */
+        }
     </style>
 </head>
-
-
-
-
-
 <body>
 
-    <center>
-        <nav>
-            <a href="http://justinbair.github.io/ist263/ProjectSite/dndintro.html ">Home</a> <span>|</span>
-            <a href="http://justinbair.github.io/ist263/ProjectSite/dndcritique.html ">Critique</a> <span>|</span>
-            <a href="http://justinbair.github.io/ist263/ProjectSite/dndcharsheet.html ">Character Sheet</a>
-        </nav>
-    </center>
+<center>
+    <nav>
+        <a href="http://justinbair.github.io/ist263/ProjectSite/dndintro.html ">Home</a> <span>|</span>
+        <a href="http://justinbair.github.io/ist263/ProjectSite/dndcritique.html ">Critique</a> <span>|</span>
+        <a href="http://justinbair.github.io/ist263/ProjectSite/dndcharsheet.html ">Character Sheet</a>
+    </nav>
+</center>
 
-
-    <div class="container">
-        
-        <div class="left-input-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter character name"> 
-            <label for="class">Class:</label>
-            <input type="text" id="class" placeholder="Enter character class">
-        </div>
-        <div class="left-input-side">
-            <label for="race">Race:</label>
-            <input type="text" id="race" placeholder="Enter character race">
-            <label for="level">Level:</label> 
-            <input type="number" id="level" min="1" placeholder="Enter character level"> 
-        </div>
-    
-        <div class="middle-input-group">
-            <label for="walking-distance">Walking Distance:</label>
-            <input type="text" id="walking-distance" placeholder="Enter walking distance">
-            <label for="inspiration">Inspiration:</label>
-            <input type="text" id="inspiration" placeholder="Enter inspiration status">
-            <label for="armor-class">Armor Class:</label>
-            <input type="number" id="armor-class" min="0" placeholder="Enter armor class">
-        </div>
-
-        <div class="right-input-group">
-            <label for="current-hit-points">Current Hit Points:</label>
-            <input type="number" id="current-hit-points" min="0" placeholder="Enter current hit points">
-            <label for="max-hit-points">Max Hit Points:</label>
-            <input type="number" id="max-hit-points" min="0" placeholder="Enter maximum hit points">
-        </div>
+<div class="container">
+    <div class="left-input-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter character name">
+        <label for="class">Class:</label>
+        <input type="text" id="class" placeholder="Enter character class">
     </div>
+    <div class="left-input-side">
+        <label for="race">Race:</label>
+        <input type="text" id="race" placeholder="Enter character race">
+        <label for="level">Level:</label>
+        <input type="number" id="level" min="1" placeholder="Enter character level">
+    </div>
+    <div class="middle-input-group">
+        <label for="walking-distance">Walking Distance:</label>
+        <input type="text" id="walking-distance" placeholder="Enter walking distance">
+        <label for="inspiration">Inspiration:</label>
+        <input type="text" id="inspiration" placeholder="Enter inspiration status">
+        <label for="armor-class">Armor Class:</label>
+        <input type="number" id="armor-class" min="0" placeholder="Enter armor class">
+    </div>
+    <div class="right-input-group">
+        <label for="current-hit-points">Current Hit Points:</label>
+        <input type="number" id="current-hit-points" min="0" placeholder="Enter current hit points">
+        <label for="max-hit-points">Max Hit Points:</label>
+        <input type="number" id="max-hit-points" min="0" placeholder="Enter maximum hit points">
+    </div>
+</div>
 
-    <div class="skills">
-        <div class="modifier">
-            <div>
-        <label for="Strength">Strength:</label> <br>
-        <input type="number" id="Strength" placeholder="STR">
-            </div>
-            <div>
-        <label for="Dexterity">Dexterity:</label> <br>
-        <input type="number" id="Dexterity" min="0" placeholder="DEX">
-            </div>
-            <div>
-        <label for="Constitution">Constitution:</label> <br>
-        <input type="number" id="Constitution" placeholder="CON">
-            </div>
-            <div>
-        <label for="Intelligence">Intelligence:</label> <br>
-        <input type="number" id="Intelligence" placeholder="INT">
-            </div>
-            <div>
-        <label for="Wisdom">Wisdom:</label> <br>
-        <input type="number" id="Wisdom" min="0" placeholder="WIS">
-            </div>
-            <div>
-        <label for="Charisma">Charisma:</label> <br>
-        <input type="number" id="Charisma" placeholder="CHA">
-            </div>
-        
-
-        <div class="proficiencies">
-            <table>
-                <caption>Skill Proficiencies</caption>
-                <tr>
-                  <th>Modifier</th>
-                  <th>Skill</th>
-                  <th>Bonus</th>
-                </tr>
-                <tr>
-                    <td>DEX</td>
-                    <td>Acrobatics</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>WIS</td>
-                    <td>Animal Handling</td>
-                    <td>1</td>
-                </tr>
-                <tr> 
-                    <td>INT</td>
-                    <td>Arcana</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>STR</td>
-                    <td>Athletics</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                  <td>CHA</td>
-                  <td>Decption</td>
-                  <td>8</td>
-                </tr>
-                <tr>
+<div class="skills">
+    <div class="modifier">
+        <div>
+            <label for="Strength">Strength:</label> <br>
+            <input type="number" id="Strength" placeholder="STR">
+        </div>
+        <div>
+            <label for="Dexterity">Dexterity:</label> <br>
+            <input type="number" id="Dexterity" min="0" placeholder="DEX">
+                </div>
+                <div>
+            <label for="Constitution">Constitution:</label> <br>
+            <input type="number" id="Constitution" placeholder="CON">
+                </div>
+                <div>
+            <label for="Intelligence">Intelligence:</label> <br>
+            <input type="number" id="Intelligence" placeholder="INT">
+                </div>
+                <div>
+            <label for="Wisdom">Wisdom:</label> <br>
+            <input type="number" id="Wisdom" min="0" placeholder="WIS">
+                </div>
+                <div>
+            <label for="Charisma">Charisma:</label> <br>
+            <input type="number" id="Charisma" placeholder="CHA">
+                </div>
+    </div>
+    <div class="proficiencies">
+        <table>
+            <caption>Skill Proficiencies</caption>
+            <tr>
+                <th>Modifier</th>
+                <th>Skill</th>
+                <th>Bonus</th>
+              </tr>
+              <tr>
+                  <td>DEX</td>
+                  <td>Acrobatics</td>
+                  <td><label for="Acrobatics"></label>
+                    <input type="number" id="Acrobatics"></td>
+              </tr>
+              <tr>
+                  <td>WIS</td>
+                  <td>Animal Handling</td>
+                  <td><label for="Animal Handling"></label>
+                    <input type="number" id="Animal Handling"></td>
+              </tr>
+              <tr> 
                   <td>INT</td>
-                  <td>History</td>
-                  <td>7</td>
-                </tr>
-                <tr>
-                    <td>WIS</td>
-                    <td>Insight</td>
-                    <td>6</td>
-                </tr>
-                <tr>
-                    <td>CHA</td>
-                    <td>Intimidation</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>INT</td>
-                    <td>Investigation</td>
-                    <td>4</td>
-                </tr>
-        
-                <tr>
-                    <td>WIS</td>
-                    <td>Medicine</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>INT</td>
-                    <td>Nature</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>WIS</td>
-                    <td>Perception</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>CHA</td>
-                    <td>Performance</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>CHA</td>
-                    <td>Persuasion</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>INT</td>
-                    <td>Religion</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>DEX</td>
-                    <td>Sleight of Hand</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>DEX</td>
-                    <td>Stealth</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>WIS</td>
-                    <td>Survival</td>
-                    <td>5</td>
-                </tr>
-              </table>
-        
+                  <td>Arcana</td>
+                  <td><label for="Arcana"></label>
+                    <input type="number" id="Arcana"></td>
+              </tr>
+              <tr>
+                  <td>STR</td>
+                  <td>Athletics</td>
+                  <td><label for="Atheletics"></label>
+                    <input type="number" id="Athletics"></td>
+              </tr>
+              <tr>
+                <td>CHA</td>
+                <td>Decption</td>
+                <td><label for="Deception"></label>
+                    <input type="number" id="Deception"></td>
+              </tr>
+              <tr>
+                <td>INT</td>
+                <td>History</td>
+                <td><label for="History"></label>
+                    <input type="number" id="History"></td>
+              </tr>
+              <tr>
+                  <td>WIS</td>
+                  <td>Insight</td>
+                  <td><label for="Insight"></label>
+                    <input type="number" id="Insight"></td>
+              </tr>
+              <tr>
+                  <td>CHA</td>
+                  <td>Intimidation</td>
+                  <td><label for="Intimidation"></label>
+                    <input type="number" id="Intimidation"></td>
+              </tr>
+              <tr>
+                  <td>INT</td>
+                  <td>Investigation</td>
+                  <td><label for="Investigation"></label>
+                    <input type="number" id="Investigation"></td>
+              </tr>
+      
+              <tr>
+                  <td>WIS</td>
+                  <td>Medicine</td>
+                  <td><label for="Medicine"></label>
+                    <input type="number" id="Medicine"></td>
+              </tr>
+              <tr>
+                  <td>INT</td>
+                  <td>Nature</td>
+                  <td><label for="Nature"></label>
+                    <input type="number" id="Nature"></td>
+              </tr>
+              <tr>
+                  <td>WIS</td>
+                  <td>Perception</td>
+                  <td><label for="Perception"></label>
+                    <input type="number" id="Perception"></td>
+              </tr>
+              <tr>
+                  <td>CHA</td>
+                  <td>Performance</td>
+                  <td><label for="Performance"></label>
+                    <input type="number" id="Performance"></td>
+              </tr>
+              <tr>
+                  <td>CHA</td>
+                  <td>Persuasion</td>
+                  <td><label for="Persuasion"></label>
+                    <input type="number" id="Persuasion"></td>
+              </tr>
+              <tr>
+                  <td>INT</td>
+                  <td>Religion</td>
+                  <td><label for="Religion"></label>
+                    <input type="number" id="Religion"></td>
+              </tr>
+              <tr>
+                  <td>DEX</td>
+                  <td>Sleight of Hand</td>
+                  <td><label for="Sleight"></label>
+                    <input type="number" id="Sleight"></td>
+              </tr>
+              <tr>
+                  <td>DEX</td>
+                  <td>Stealth</td>
+                  <td><label for="Stealth"></label>
+                    <input type="number" id="Stealth"></td>
+              </tr>
+              <tr>
+                  <td>WIS</td>
+                  <td>Survival</td>
+                  <td><label for="Survival"></label>
+                    <input type="number" id="Survival"></td>
+              </tr>
 
-        </div>
-
+        </table>
     </div>
+    <div class="information">
+        <div>
+            <h2>Big Text Box</h2>
+            <textarea placeholder="Enter your text here..."></textarea>
+        </div>
+        <div>
+            <h2>Big Text Box</h2>
+            <textarea placeholder="Enter your text here..."></textarea>
+        </div>
+        <div>
+            <h2>Big Text Box</h2>
+            <textarea placeholder="Enter your text here..."></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <h2>Big Text Box</h2>
+    <textarea placeholder="Enter your text here..."></textarea>
 </div>
 
 </body>
