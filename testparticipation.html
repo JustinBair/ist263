@@ -9,6 +9,10 @@
             border: 1px solid #000000;
         }
 
+        nav, h1 {
+    text-align: center;
+}
+
         .container {
             display: flex;
             flex-direction: row;
@@ -67,7 +71,6 @@
 }
         .skills {
             display: flex;
-            align-items: left;
             flex-wrap: wrap;
         }
 
@@ -123,15 +126,15 @@
 </head>
 <body>
 
-<center>
+
     <nav>
         <a href="http://justinbair.github.io/ist263/ProjectSite/dndintro.html ">Home</a> <span>|</span>
         <a href="http://justinbair.github.io/ist263/ProjectSite/dndcritique.html ">Critique</a> <span>|</span>
         <a href="http://justinbair.github.io/ist263/ProjectSite/dndcharsheet.html ">Character Sheet</a>
     </nav>
-</center>
 
-<center><h1>Character Sheet</h1></center>
+
+<h1>Character Sheet</h1>
 
 <div class="container">
     <div class="left-input-group">
@@ -165,6 +168,7 @@
 <div class="skills">
     <div class="modifier">
         <h2>Skill Modifiers</h2>
+        <caption></caption>
         <div>
             <label for="Strength">Strength:</label> <br>
             <input type="number" id="Strength" placeholder="STR">
