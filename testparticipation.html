@@ -12,14 +12,15 @@
         .container {
             display: flex;
             flex-direction: row;
-            justify-content: space-between; /* Distribute space between flex items */
+            justify-content: space-between;
+            border: 2px solid #000000;
+            flex-wrap: wrap;
         }
 
         .left-input-group {
             flex: 1;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
             flex-direction: column;
         }
 
@@ -27,15 +28,20 @@
             flex: 1;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
             flex-direction: column;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
         }
+        
 
         .middle-input-group {
             flex: 1;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         .right-input-group {
@@ -45,21 +51,49 @@
             justify-content: space-between;
             align-items: center;
             flex-direction: row;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            border-right: 2px solid #ffffff;
         }
 
+        .right-input-group input[type="number"] {
+    width: 80px; /* Adjust width to make the input boxes wider */
+    height: 60px; /* Keep the height to maintain the square shape */
+    padding: 5px; /* Add padding for better spacing */
+    margin: 10px 0; /* Add more margin for spacing between input boxes */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    border: 1px solid #000; /* Add border for styling */
+}
         .skills {
             display: flex;
             align-items: left;
+            flex-wrap: wrap;
         }
 
         .modifier {
             flex: 1;
             padding: 20px;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
         }
+
+        .modifier input[type="number"] {
+    width: 60px; /* Adjust width to make the input boxes more square */
+    height: 60px; /* Adjust height to match the width */
+    padding: 5px; /* Add padding for better spacing */
+    margin: 5px 0; /* Add margin for spacing between input boxes */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    border: 1px solid #000000; /* Add border for styling */
+}
 
         .proficiencies {
             flex: 2;
             width: auto; /* Let the width adjust automatically */
+            padding: 20px;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
         }
 
         .information {
@@ -122,9 +156,9 @@
     </div>
     <div class="right-input-group">
         <label for="current-hit-points">Current Hit Points:</label>
-        <input type="number" id="current-hit-points" min="0" placeholder="Enter current hit points">
+        <input type="number" id="current-hit-points" min="0" placeholder="">
         <label for="max-hit-points">Max Hit Points:</label>
-        <input type="number" id="max-hit-points" min="0" placeholder="Enter maximum hit points">
+        <input type="number" id="max-hit-points" min="0" placeholder="">
     </div>
 </div>
 
