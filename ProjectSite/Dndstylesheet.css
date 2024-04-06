@@ -1,8 +1,4 @@
 
-        table, th, td {
-            border: 1px solid #000000;
-        }
-
         nav, h1 {
     text-align: center;
 }
@@ -61,7 +57,7 @@
     padding: 5px; /* Add padding for better spacing */
     margin: 10px 0; /* Add more margin for spacing between input boxes */
     border-radius: 5px; /* Add border-radius for rounded corners */
-    border: 1px solid #000; /* Add border for styling */
+    border: 1px solid #000000; /* Add border for styling */
 }
         .skills {
             display: flex;
