@@ -112,3 +112,17 @@
             border: 1px solid #000000;
             resize: vertical; /* Allow vertical resizing */
         }
+
+
+
+        .middlecontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap; }
+
+            .middlecontainer2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap; }
