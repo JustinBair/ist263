@@ -1,12 +1,12 @@
 body {background-color: #EEE2DE}
-        a {color: #B31312}
+        a {color: #ff1919}
         a:visited {background-color: #2B2A4C}
         a:hover {background-color: #adff7d}
         body {font-family: 'Times New Roman', Times, serif;}
         h1, h2 {
             color: #2B2A4C;
         }
-        p, ul, td, th, dl, dt, dd {color: #B31312; font-size: 1em;}
+        p, ul, td, th, dl, dt, dd {color: #000000; font-size: 1em;}
 
 
 nav {background-color: #d0d0d0; 
