@@ -5,7 +5,7 @@ body {
 
 /* Link color */
 a {
-    color: #ff1919; /* Bright red */
+    color: #ff0000; /* Brighter red */
 }
 
 /* Visited link background color */
@@ -38,14 +38,13 @@ nav {
 
 /* Navigation link color */
 nav a {
-    color: #ff1919; /* Bright red */
+    color: #ff0000; /* Brighter red */
 }
 
 /* Hover color for navigation links */
 nav a:hover {
     background-color: #1f1717; /* Dark background for hover */
 }
-
 
 .evenrow {background-color: #f4bf96;} 
 
