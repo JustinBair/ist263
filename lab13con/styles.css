@@ -1,5 +1,5 @@
-body {background-color: #EEE2DE}
-        a {color: #ff1919}
+body {background-color: #FFFFFF}
+        a {color: #000000}
         a:visited {background-color: #2B2A4C}
         a:hover {background-color: #adff7d}
         body {font-family: 'Times New Roman', Times, serif;}
@@ -9,11 +9,11 @@ body {background-color: #EEE2DE}
         p, ul, td, th, dl, dt, dd {color: #000000; font-size: 1em;}
 
 
-nav {background-color: #d0d0d0; 
+nav {background-color: #000000; 
     padding: 10px;
     margin-bottom: 30px;
     }
-    nav a{color: #ff1919}
+    nav a{color: #FF6666}
     nav a:hover {background-color: #adff7d;}
 
 
