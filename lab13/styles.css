@@ -1,50 +1,22 @@
-/* Background color for the body */
-body {
-    background-color: #EEE2DE; /* Light gray background */
-}
+body {background-color: #EEE2DE}
+        a {color: #B31312}
+        a:visited {background-color: #2B2A4C}
+        a:hover {background-color: #adff7d}
+        body {font-family: 'Times New Roman', Times, serif;}
+        h1, h2 {
+            color: #2B2A4C;
+        }
+        p, ul, td, th, dl, dt, dd {color: #B31312; font-size: 1em;}
 
-/* Link color */
-a {
-    color: #ff0000; /* Brighter red */
-}
 
-/* Visited link background color */
-a:visited {
-    background-color: #CE5A67; /* Light red */
-}
+nav {background-color: #d0d0d0; 
+    padding: 10px;
+    margin-bottom: 30px;
+    }
+    nav a{color: #ff1919}
+    nav a:hover {background-color: #adff7d;}
 
-/* Hover color for links */
-a:hover {
-    background-color: #1f1717; /* Dark background for hover */
-}
 
-/* Font family */
-body {
-    font-family: 'Times New Roman', Times, serif; /* Serif font */
-}
-
-/* Text color for paragraphs, lists, table elements */
-p, ul, td, th, dl, dt, dd {
-    color: #333; /* Dark gray text color */
-    font-size: 1em; /* Normal font size */
-}
-
-/* Navigation background color */
-nav {
-    background-color: #aaaaaa; /* Light gray background for navigation */
-    padding: 10px; /* Padding around navigation links */
-    margin-bottom: 30px; /* Margin at the bottom of navigation */
-}
-
-/* Navigation link color */
-nav a {
-    color: #ff0000; /* Brighter red */
-}
-
-/* Hover color for navigation links */
-nav a:hover {
-    background-color: #1f1717; /* Dark background for hover */
-}
 
 .evenrow {background-color: #f4bf96;} 
 
