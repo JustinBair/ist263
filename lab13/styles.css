@@ -1,20 +1,50 @@
-body {background-color: #EEE2DE}
-        a {color: #B31312}
-        a:visited {background-color: #2B2A4C}
-        a:hover {background-color: #adff7d}
-        body {font-family: 'Times New Roman', Times, serif;}
-        h1, h2 {
-            color: #2B2A4C;
-        }
-        p, ul, td, th, dl, dt, dd {color: #B31312; font-size: 1em;}
+/* Background color for the body */
+body {
+    background-color: #000000; /* Black background */
+}
 
+/* Link color */
+a {
+    color: #FF0000; /* Bright red */
+}
 
-nav {background-color: #d0d0d0; 
-    padding: 10px;
-    margin-bottom: 30px;
-    }
-    nav a{color: #ff1919}
-    nav a:hover {background-color: #adff7d;}
+/* Visited link background color */
+a:visited {
+    background-color: #00FF00; /* Bright green */
+}
+
+/* Hover color for links */
+a:hover {
+    background-color: #0000FF; /* Bright blue */
+}
+
+/* Font family */
+body {
+    font-family: 'Arial', sans-serif; /* Sans-serif font */
+}
+
+/* Text color for paragraphs, lists, table elements */
+p, ul, td, th, dl, dt, dd {
+    color: #FFFFFF; /* White text color */
+    font-size: 1em; /* Normal font size */
+}
+
+/* Navigation background color */
+nav {
+    background-color: #FFFFFF; /* White background for navigation */
+    padding: 10px; /* Padding around navigation links */
+    margin-bottom: 30px; /* Margin at the bottom of navigation */
+}
+
+/* Navigation link color */
+nav a {
+    color: #FF0000; /* Bright red */
+}
+
+/* Hover color for navigation links */
+nav a:hover {
+    background-color: #0000FF; /* Bright blue */
+}
 
 
 
