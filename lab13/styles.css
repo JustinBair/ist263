@@ -4,12 +4,12 @@ body {background-color: #EEE2DE}
         a:hover {background-color: #1f1717}
         body {font-family: 'Times New Roman', Times, serif;}
         h1, h2 {
-            color: #565574;
+            color: #4a497f;
         }
         p, ul, td, th, dl, dt, dd {color: #B31312; font-size: 1em;}
 
 
-nav {background-color: #565574; 
+nav {background-color: #4a497f; 
     padding: 10px;
     margin-bottom: 30px;
     }
