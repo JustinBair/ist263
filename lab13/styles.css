@@ -3,7 +3,9 @@ body {background-color: #EEE2DE}
         a:visited {background-color: #CE5A67}
         a:hover {background-color: #1f1717}
         body {font-family: 'Times New Roman', Times, serif;}
-        h1, h2 {color: #2B2A4C;}
+        h1, h2 {
+            color: #565574;
+        }
         p, ul, td, th, dl, dt, dd {color: #B31312; font-size: 1em;}
 
 
