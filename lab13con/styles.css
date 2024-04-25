@@ -82,14 +82,7 @@ nav {background-color: #000000;
                 font-weight: 300;
                 font-style: normal;
               }
-              
-              p,
-              ul,
-              td,
-              th,
-              dl,
-              dt,
-              dd,
+                body, 
               .roboto-regular,
               .roboto-regular-italic {
                 font-family: "Roboto", sans-serif;
