@@ -3,13 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D&D Character Sheet</title>
-    <link rel="stylesheet" href="Dndstylesheet.css">
+    <title>D&D Character Attributes</title>
     <style>
+/* Define CSS variables for colors */
+:root {
+    /* Primary Color (Dark Blue) */
+    --primary-color: #002366;
 
-table, th, td {
+    /* Secondary Color (Gold) */
+    --secondary-color: #FFD700;
+
+    /* Accent Color (Dark Red) */
+    --accent-color: #800000;
+
+    /* Neutral Background (Light Gray) */
+    --neutral-bg: #F5F5F5;
+
+    /* Text Color (White) */
+    --text-color: #FFFFFF;
+}
+
+/* Define classes to apply colors using CSS variables */
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.neutral-bg {
+    background-color: var(--neutral-bg);
+}
+
+.text-white {
+    color: var(--text-color);
+}
+
+/* Usage example */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+body {
+    background-color: var(--neutral-bg);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    background-color: var(--accent-color);
+}
+
+a:hover {
+    background-color: var(--primary-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+p, ul, td, th, dl, dt, dd {
+    color: var(--accent-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+.evenrow {
+    background-color: var(--secondary-color);
+}
+
+
+
+
+
+
+        table, th, td {
             border: 1px solid #000000;
         }
+
+        nav, h1 {
+    text-align: center;
+}
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: 2px solid #000000;
+            flex-wrap: wrap;
+        }
+
+        .left-input-group {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left-input-side {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+        }
+        
+
+        .middle-input-group {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .right-input-group {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+            border-right: 2px solid #ffffff;
+            padding: 10px;
+        }
+
+        .right-input-group input[type="number"] {
+    width: 80px; /* Adjust width to make the input boxes wider */
+    height: 60px; /* Keep the height to maintain the square shape */
+    padding: 5px; /* Add padding for better spacing */
+    margin: 10px 0; /* Add more margin for spacing between input boxes */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    border: 1px solid #000; /* Add border for styling */
+}
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .modifier {
+            flex: 1;
+            padding: 20px;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+        }
+
+        .modifier input[type="number"] {
+    width: 60px; /* Adjust width to make the input boxes more square */
+    height: 60px; /* Adjust height to match the width */
+    padding: 5px; /* Add padding for better spacing */
+    margin: 5px 0; /* Add margin for spacing between input boxes */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    border: 1px solid #000000; /* Add border for styling */
+}
+
+        .proficiencies {
+            flex: 2;
+            width: auto; /* Let the width adjust automatically */
+            padding: 20px;
+            border: 2px solid #000000;
+            border-top: 2px solid #ffffff;
+            border-left: 2px solid #ffffff;
+        }
+
+        .information {
+            flex: 3; /* Adjust the flex value to allocate more space */
+            padding: 20px;
+        }
+
+        .information textarea {
+            flex: 1; /* Make the text area expand to fill available space */
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            resize: vertical;
+            margin-bottom: 10px; /* Add margin bottom for spacing */
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px; /* Adjust the height as needed */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        label[for="name"], label[for="race"], label[for="class"], label[for="level"], label[for="walking-distance"], label[for="inspiration"], label[for="armor-class"], label[for="current-hit-points"], label[for="max-hit-points"], label[for="Strength"], label[for="Dexterity"], label[for="Constitution"], label[for="Intelligence"], label[for="Wisdom"], label[for="Charisma"]
+        {
+            color: var(--accent-color); /* Set the color of the labels for Name and Race to red */
+}
 
 
     </style>
@@ -23,7 +235,7 @@ table, th, td {
         <a href="http://justinbair.github.io/ist263/ProjectSite/dndcharsheet.html ">Character Sheet</a>
     </nav>
 
-
+<main>
 <h1>Character Sheet</h1>
 
 <div class="container">
@@ -225,6 +437,11 @@ table, th, td {
     <h2>Background and Characteristics</h2>
     <textarea placeholder="Enter your text here..."></textarea>
 </div>
+</main>
+
+<footer>
+    <p>Let Your Quest Begin!</p>
+</footer>
 
 </body>
 </html>

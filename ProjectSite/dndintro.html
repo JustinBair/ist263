@@ -4,8 +4,219 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeons and Dragons Fan Page</title>
-    <link rel="stylesheet" href="Dndstylesheet.css">
 </head>
+
+
+<style>
+/* Define CSS variables for colors */
+:root {
+    /* Primary Color (Dark Blue) */
+    --primary-color: #002366;
+
+    /* Secondary Color (Gold) */
+    --secondary-color: #FFD700;
+
+    /* Accent Color (Dark Red) */
+    --accent-color: #800000;
+
+    /* Neutral Background (Light Gray) */
+    --neutral-bg: #F5F5F5;
+
+    /* Text Color (White) */
+    --text-color: #FFFFFF;
+}
+
+/* Define classes to apply colors using CSS variables */
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.neutral-bg {
+    background-color: var(--neutral-bg);
+}
+
+.text-white {
+    color: var(--text-color);
+}
+
+/* Usage example */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+body {
+    background-color: var(--neutral-bg);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    background-color: var(--accent-color);
+}
+
+a:hover {
+    background-color: var(--primary-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+p, ul, td, th, dl, dt, dd {
+    color: var(--accent-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+.evenrow {
+    background-color: var(--secondary-color);
+}
+
+.background_container {
+    background-image: url('../ProjectSite/projectimages/dndintrobackground.png');
+    background-size: cover; /* This property ensures that the background image covers the entire element */
+    background-position: center; /* This property centers the background image */
+    /* Other styles for your overlay */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 700px; /* Adjust the height as needed */   
+}
+
+.middle_container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottom_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.box {
+    width: 500px; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    border: 1px solid #ffffff; /* For visualization */
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 50px; /* Set padding as a percentage of the width */
+    margin: 25px; /* Add margin space */
+    background-color: #ffffff; /* White background */
+}
+
+.top_box {
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    border: 1px solid #ffffff; /* For visualization */
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 50px; /* Set padding as a percentage of the width */
+    margin: 25px; /* Add margin space */
+    background-color: #ffffff; /* White background */
+}
+
+        /* Add margin to separate the images from the edges of the screen */
+        .left_box, .right_box {
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    border: 1px solid #ffffff; /* For visualization */
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 15px; /* Set padding as a percentage of the width */
+    margin: 25px; /* Add margin space */
+    background-color: #ffffff; /* White background */
+        }
+
+nav, h1, h2 {
+    text-align: center;
+}
+
+.bottomsec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add some margin between containers */
+}
+
+.leftcontainer, .rightcontainer {
+    width: 45%; 
+    padding: 20px; /* Adjust the width as needed */
+}
+
+
+.ltext,
+.rtext {
+    padding: 20px; /* Add padding around the text */
+}
+
+.image {
+    max-width: 100%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media screen and (max-width: 600px) {
+    .container,
+    .middle_container,
+    .bottom_container,
+    .box,
+    .top_box,
+    .left_box,
+    .right_box 
+     {
+        width: 90%; /* Adjust the width as needed */
+        padding: 10px; /* Adjust the padding as needed */
+        margin: 10px; /* Adjust the margin as needed */
+    }
+
+  .rightcontainer, .leftcontainer img { display: none;}
+            
+
+
+
+}
+
+
+
+
+
+
+</style>
+
+
+
+
 <body>
 
     <nav>
@@ -15,14 +226,53 @@
     </nav>
 
 
-<header>
+<!--
+    <div class="container">
+        <div class="box"><h1>Dungeons and Dragons Fan Page</h1></div>
+        <div class="box"><h2>What is Dungeons & Dragons?</h2> <br>
+            <p>Dungeons & Dragons, affectionately known as D&D or DND, is more than just a game; it's a gateway to boundless creativity and unforgettable storytelling. In D&D, players assume the roles of fantastical characters, from noble knights to cunning wizards, as they embark on quests set in richly imagined worlds.</p> <br> 
+         </div>
+        <div class="box"><h2>How is it Played?</h2> <br>
+            <p>At its core, D&D is a collaborative storytelling experience guided by rules and dice rolls. A Dungeon Master (DM) crafts the narrative and serves as the players' guide, while the players navigate challenges, make decisions, and roll dice to determine outcomes. The result? A dynamic adventure shaped by the choices of everyone involved.</p> <br> 
+         </div>
+        <div class="box"><p>Welcome to the realm of Dungeons & Dragons, where imagination knows no bounds and epic adventures await around every corner. As an avid fan of this legendary tabletop role-playing game, I'm thrilled to share my passion and insights with fellow adventurers like you.</p>
+        </div>
+      </div>
+    -->
+
+
+    <div class="background_container">
+<div class="container">
+    <div class="top_box"><h1>Dungeons and Dragons Fan Page</h1></div>
+</div>
+
+<div class="middle_container">
+    <div class="left_box"><h2>What is Dungeons & Dragons?</h2> 
+        <p>Dungeons & Dragons, affectionately known as D&D or DND, is more than just a game; it's a gateway to boundless creativity and unforgettable storytelling. In D&D, players assume the roles of fantastical characters, from noble knights to cunning wizards, as they embark on quests set in richly imagined worlds.</p> <br> 
+     </div>
+    <div class="right_box"><h2>How is it Played?</h2>
+        <p>At its core, D&D is a collaborative storytelling experience guided by rules and dice rolls. A Dungeon Master (DM) crafts the narrative and serves as the players' guide, while the players navigate challenges, make decisions, and roll dice to determine outcomes. The result? A dynamic adventure shaped by the choices of everyone involved.</p> <br> 
+     </div>
+</div>
+
+<div class="bottom_container">
+    <div class="box"><h2>Welcome Everyone!</h2>
+        <p>Welcome to the realm of Dungeons & Dragons, where imagination knows no bounds and epic adventures await around every corner. As an avid fan of this legendary tabletop role-playing game, I'm thrilled to share my passion and insights with fellow adventurers like you.</p>
+    </div>
+</div>
+</div>
+
+
+
+
+<!--
 <h1>Dungeons and Dragons Fan Page</h1>
-<img src="../ProjectSite/projectimages/Screenshot%202024-02-25%20190420.jpg" alt="banner image">
+<img src="../ProjectSite/projectimages/Screenshot 2024-02-25 190420.jpg" alt="banner image">
 <p>Welcome to the realm of Dungeons & Dragons, where imagination knows no bounds and epic adventures await around every corner. As an avid fan of this legendary tabletop role-playing game, I'm thrilled to share my passion and insights with fellow adventurers like you.</p> <br>
-</header>
 
 
-<div class="middlecontainer">
+
+<div class="container">
     <div class="left">
         <h2>What is Dungeons & Dragons?</h2> 
         <p>Dungeons & Dragons, affectionately known as D&D or DND, is more than just a game; it's a gateway to boundless creativity and unforgettable storytelling. In D&D, players assume the roles of fantastical characters, from noble knights to cunning wizards, as they embark on quests set in richly imagined worlds.</p> <br> 
@@ -32,41 +282,42 @@
         <p>At its core, D&D is a collaborative storytelling experience guided by rules and dice rolls. A Dungeon Master (DM) crafts the narrative and serves as the players' guide, while the players navigate challenges, make decisions, and roll dice to determine outcomes. The result? A dynamic adventure shaped by the choices of everyone involved.</p> <br> 
      </div>
 </div>
+-->
 
 
-
-<!-- On the left side -->
-<div class="leftcontainer">
-    <div class="ltext">
-        <h2>Exploring Terminology</h2>
-        <p>To navigate the realms of D&D, it's essential to understand key terminology: 
-
-            Character Sheet: A record of a player's character, detailing their abilities, skills, and backstory. 
-            
-            Campaign: A series of interconnected adventures forming a larger story arc. 
-            
-            NPC: Non-player characters controlled by the DM to interact with players. 
-            
-            Critical Hit: A lucky roll resulting in maximum damage. 
-            
-            Critical Fail: A disastrous roll with unforeseen consequences.  </p> <br> 
+<div class="bottomsec">
+    <!-- On the left side -->
+    <div class="leftcontainer">
+        <div class="ltext">
+            <h2>Exploring Terminology</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>Character Sheet: A record of a player's character, detailing their abilities, skills, and backstory.</li> <br>
+                <li>Campaign: A series of interconnected adventures forming a larger story arc.</li> <br>
+                <li>NPC: Non-player characters controlled by the DM to interact with players.</li> <br>
+                <li>Critical Hit: A lucky roll resulting in maximum damage.</li> <br>
+                <li>Critical Fail: A disastrous roll with unforeseen consequences.</li> <br>
+            </ul>
+        </div>
     </div>
-    <img src="../ProjectSite/projectimages/PXL_20240226_001230393.MP.jpg" alt="Image of Dice" class="image" width="600" height="500">
+    <!-- Image on the right side -->
+    <div class="rightcontainer">
+        <img src="../ProjectSite/projectimages/PXL_20240226_001230393.MP.jpg" alt="Image of Dice" class="image" width="600" height="500">
+    </div>
 </div>
 
-
-<!--On the right side-->
-<div class="rightcontainer">
+<div class="bottomsec">
+    <!-- On the right side -->
+    <div class="leftcontainer">
+        <img src="../ProjectSite/projectimages/PXL_20240226_001259252.MP.jpg" alt="Image of Dice" class="image" width="850" height="500">
+    </div>
     <div class="rtext">
         <h2>Have Fun!</h2>
         <p>Whether you're a seasoned veteran or a curious newcomer, there's always room for more adventurers at the table. Join me on this journey through the realms of Dungeons & Dragons, where every choice shapes the story, and every roll of the dice holds the promise of adventure. </p> <br> 
-
     </div>
-    <img src="../ProjectSite/projectimages/PXL_20240226_001259252.MP.jpg" alt="Image of Dice" class="image" width="850" height="500">
 </div>
 
 
 
-<footer>Let Your Quest Begin!</footer>
+<footer><p>Let Your Quest Begin!</p></footer>
 </body>
 </html>

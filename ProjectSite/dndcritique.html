@@ -4,8 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D&D Critique</title>
-    <link rel="stylesheet" href="Dndstylesheet.css">
 </head>
+<style> 
+/* Define CSS variables for colors */
+:root {
+    /* Primary Color (Dark Blue) */
+    --primary-color: #002366;
+
+    /* Secondary Color (Gold) */
+    --secondary-color: #FFD700;
+
+    /* Accent Color (Dark Red) */
+    --accent-color: #800000;
+
+    /* Neutral Background (Light Gray) */
+    --neutral-bg: #F5F5F5;
+
+    /* Text Color (White) */
+    --text-color: #FFFFFF;
+}
+
+/* Define classes to apply colors using CSS variables */
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.neutral-bg {
+    background-color: var(--neutral-bg);
+}
+
+.text-white {
+    color: var(--text-color);
+}
+
+/* Usage example */
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+body {
+    background-color: var(--neutral-bg);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    background-color: var(--accent-color);
+}
+
+a:hover {
+    background-color: var(--primary-color);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+p, ul, td, th, dl, dt, dd {
+    color: var(--accent-color);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+.evenrow {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    color: var(--accent-color); /* Set the text color */
+}
+
+
+
+nav {text-align: center;}
+.container {display: flex; justify-content: center; text-align: center; flex-wrap: flex;}
+.middle {padding: 100px;}
+
+.part_two, .split {
+    /* Add border to the container */
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    flex-wrap: flex;
+}
+
+.image-container {
+    position: relative;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 21%;
+    background-color: #ffffff;
+    /* Add border to the overlay container */
+    border: 2px solid #000000;
+    flex-wrap: flex;
+}
+
+.left_side, .right_side, .middle  {
+    padding: 20px;
+}
+
+.endpicture, .right_picture {flex-wrap: flex;
+}
+
+.leftsideimage {
+    max-width: 100%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media screen and (max-width: 600px) {
+            /* Adjust container and part_two */
+            .container,
+            .middle,
+            .part_two {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Adjust container images */
+            .container img {
+                margin: 10px 0;
+                width: 90%; /* Adjust image width */
+                max-width: 350px; /* Set max width */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            /* Adjust overlay container */
+            .overlay-container {
+                width: 90%; /* Adjust width */
+                max-width: 350px; /* Set max width */
+                height: auto;
+            }
+
+            /* Adjust text overlay width */
+            .right_text_overlay,
+            .middle_text_overlay {
+                width: 90%; /* Adjust width */
+                max-width: 350px; /* Set max width */
+            }
+
+            /* Adjust padding */
+            .left_side,
+            .right_side,
+            .middle {
+                padding: 10px; /* Adjust padding */
+            }
+            
+            /* Hide images in part_two and right_text_overlay */
+            .left_text_overlay,
+            .part_two img,
+            .right_text_overlay img,
+            .split img,
+            .overlay-container,
+            .right_side {
+                display: none;
+            }
+        }
+
+
+
+
+
+</style>
 <body>
 
         <nav>
@@ -17,7 +206,7 @@
 
 
 <!--In the Middle-->
-       <div class="middlecontainer2">
+       <div class="container">
         <img src="../ProjectSite/projectimages/PXL_20240226_001533159.MP.jpg" alt="Left Image" class="leftimage" width="350" height="350">
         <div class="middle">
             <h2>My Thoughts on D&D </h2>
@@ -25,37 +214,51 @@
         </div>
         <img src="../ProjectSite/projectimages/PXL_20240226_001024404.jpg" alt="Right Image" class="rightimage" width="350" height="350">
     </div>
+    
 
-
-<!--On the left side-->
-    <div class="left_text_overlay">
-        <img src="../ProjectSite/projectimages/Screenshot%202024-02-25%20191910.jpg" alt="Left Image" class="leftsideimage" width="350" height="350">
-        <div class="left_side">
-            <h2>Character Creation Complexity </h2>
-            <p> One aspect of D&D that can be both a blessing and a curse is the complexity of character creation. While the vast array of options allows for unparalleled customization, it can overwhelm new players and bog down the start of a campaign. Streamlining character creation without sacrificing depth could make the game more accessible to beginners. </p>
+    <div class="part_two">
+        <div class="left_text_overlay">
+            <div class="image-container">
+                <img src="../ProjectSite/projectimages/dndcritique.png" alt="Left Image" class="leftsideimage">
+                <div class="overlay-container">
+                    <div class="left_side">
+                        <h2>Character Creation Complexity</h2>
+                        <p>One aspect of D&D that can be both a blessing and a curse is the complexity of character creation. While the vast array of options allows for unparalleled customization, it can overwhelm new players and bog down the start of a campaign. Streamlining character creation without sacrificing depth could make the game more accessible to beginners.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-
-<!--On the right side-->
+    
+    
     <div class="right_text_overlay">
-        <img src="../ProjectSite/projectimages/Screenshot%202024-02-25%20191910.jpg" alt="Right Image" class="rightsideimage" width="350" height="350">
-        <div class="right_side">
-            <h2>Combat Mechanics Pacing</h2>
-            <p>Combat in D&D, while thrilling, can sometimes slow the pace of gameplay to a crawl. The intricacies of combat mechanics, including initiative rolls, action economy, and spell resolutions, can lead to lengthy battles that detract from the narrative flow. Exploring ways to streamline combat without sacrificing strategic depth could keep players more engaged throughout encounters. </p>
+        <div class="right_picture"style="position: relative;">
+            <img src="../ProjectSite/projectimages/dndcritiquept2.png" alt="Right Image" class="rightsideimage">
+            <div class="overlay-container">
+                <div class="right_side">
+                    <h2>Combat Mechanics Pacing</h2>
+                    <p>Combat in D&D, while thrilling, can sometimes slow the pace of gameplay to a crawl. The intricacies of combat mechanics, including initiative rolls, action economy, and spell resolutions, can lead to lengthy battles that detract from the narrative flow. Exploring ways to streamline combat without sacrificing strategic depth could keep players more engaged throughout encounters.</p>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-<!--In the middle bottom of the page-->
-<div class="middle_text_overlay">
-    <img src="../ProjectSite/projectimages/PXL_20240226_001356198.MP.jpg" alt="Middle Image" class="middlesideimage" width="350" height="350">
-    <div class="middle">
-        <h2>Combat Mechanics Pacing</h2>
-        <p>Combat in D&D, while thrilling, can sometimes slow the pace of gameplay to a crawl. The intricacies of combat mechanics, including initiative rolls, action economy, and spell resolutions, can lead to lengthy battles that detract from the narrative flow. Exploring ways to streamline combat without sacrificing strategic depth could keep players more engaged throughout encounters. </p>
     </div>
 </div>
 
+
+<div class="split">
+    <div class="endpicture">
+        <img src="../ProjectSite/projectimages/dndcritiquelast.png" alt="Image of Dice" class="image">
+    </div>
+    <div class="middle">
+        <h2>Understanding the Enemies</h2>
+        <p>The issue arises from the inherent complexity of D&D's rules and the variability of encounters. Enemy character sheets may lack the level of detail and organization found in player character sheets, making it challenging for DMs to quickly and accurately assess their capabilities. This can lead to inconsistencies in gameplay, as DMs may inadvertently over- or underestimate the threat posed by certain enemies.</p><br>
+
+            <p>Furthermore, enemy character sheets often contain abilities and mechanics that may be unfamiliar to the DM or not fully explained in the game materials. This can result in confusion during gameplay, as DMs scramble to understand and apply these mechanics on the fly.</p><br>
+            
+            <p>Another factor to consider is the balance between challenge and fairness. D&D is designed to provide players with a challenging yet enjoyable experience, but misinterpreting enemy character sheets can disrupt this balance. An enemy that is too powerful can lead to frustration and dissatisfaction among players, while one that is too weak may diminish the sense of accomplishment from overcoming obstacles.</p> <br> 
+    </div>
+</div>
+
+
+<footer>Let Your Quest Begin!</footer>
 </body>
 </html>
